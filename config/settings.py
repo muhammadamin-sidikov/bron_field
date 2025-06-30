@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY", default="insecure-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = config("DJANGO_ALLOWED_HOSTS", default="127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = ['bron-field.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
