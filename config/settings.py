@@ -79,6 +79,9 @@ EMAIL_HOST_USER = 'muhammadaminsidiko6@gmail.com'
 EMAIL_HOST_PASSWORD = 'zhtneehfdgwafkww'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -113,7 +116,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=config("DATABASE_URL"))
+    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
 
